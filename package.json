@@ -1,15 +1,23 @@
 {
-  "name": "Request Header Parser Microservice",
-  "version": "1.0.0",
-  "description": "Detects client IP address, browser language and operating system",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Deyan Vladkov",
-  "license": "BSD",
-  "dependencies": {
-    "express": "^4.15.3",
-    "ua-parser": "^0.3.5"
-  }
+    "name": "RequestHeaderParserMicroservice",
+    "version": "1.0.0",
+    "description": "Detects client IP address, browser language and operating system",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Deyan Vladkov",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DeVlad/request-header-parser-microservice.git"
+    },
+
+    "dependencies": {
+        "express": "^4.15.3",
+        "ua-parser": "^0.3.5"
+    },
+    "engines": {
+        "node": "^6.10.3"
+    }
 }
