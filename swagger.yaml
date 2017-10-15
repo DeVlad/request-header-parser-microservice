@@ -1,0 +1,46 @@
+swagger: '2.0'
+info:
+  description: >-
+    API which returns IP address, language and operating system from the client
+    browser in JSON format.
+  version: 1.0.0
+  title: Request header parser microservice
+  contact:
+    email: deyan.vladkov@gmail.com
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: iposapi.herokuapp.com
+basePath: /api
+tags:
+  - name: api
+    description: Display client information
+schemes:
+  - http
+paths:
+  /api/:
+    get:
+      tags:
+        - api
+      description: 'Returns clinet IP address, language and OS'
+      operationId: get
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/Api'
+definitions:
+  Api:
+    type: object
+    properties:
+      ip:
+        type: string
+        example: 93.184.216.34
+      language:
+        type: string
+        example: en-US
+      software:
+        type: string
+        example: Windows 8.1
